@@ -1,6 +1,8 @@
 const assert = require("node:assert/strict")
 
 class Maze {
+    maze: object
+
     constructor(height: number, width: number, wall_sequence: boolean[]) {
         const total_squares = height * width
 
@@ -35,6 +37,6 @@ class Maze {
     }
 }
 
-const maze = new Maze(3, 3, [true, true, true, true, false, false, true, true, true])
-
-console.dir(maze.maze)
+module.exports = {
+    Maze
+}
